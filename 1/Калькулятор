@@ -1,0 +1,36 @@
+  import java.util.Scanner;
+
+public class Main{
+
+
+  public static void main(String[] args) {
+    System.out.println("МОЙ КАЛЬКУЛЯТОР");
+  System.out.println("Введите операцию!"); // ввыводим на печать )
+	System.out.println("1. Сложение!");
+	System.out.println("2. Вычитание!");
+	System.out.println("3. Деление!");
+	System.out.println("4. Умножение!");
+
+  Scanner scanner = new Scanner(System.in);        // объявляем объект 
+	int operation = scanner.nextInt();       // заносим значение
+	System.out.println("ВВедите первое число");
+  int a = scanner.nextInt();                 // число которое будет вводить пользователь (первое) 
+	System.out.println("ВВедите второе число");
+  int b = scanner.nextInt();   // число которое будем выводить на печать пользователь (второе) 
+	int result; 
+  
+
+if(operation == 1) {             // цикл IF else 
+	result = a + b ;                 // результат сложения 
+	} else if (operation == 2) {	  
+	result = a-b ;
+	} else if (operation == 3) {      
+	result = a/b ;
+	} else {						// если другое то ... 
+	result = a*b ;
+	}
+	
+	System.out.println("Результат =" + result);
+
+  }
+  }
