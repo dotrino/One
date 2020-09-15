@@ -1,0 +1,33 @@
+import java.awt.GraphicsConfiguration;
+import javax.swing.*;
+import java.awt.*;
+
+
+public class Main extends JFrame { 
+private static Main game_window;
+public static void main( String[] args ) {    
+  game_window = new Main();
+  game_window.setLocation(200,100);
+  game_window.setSize(906,478);
+  game_window.setResizable(false);
+  game_window.setVisible(true);
+  game_window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+  GameField game_field = new GameField();
+  game_window.add(game_field);
+}
+
+private static void onRepaint(Graphics g) {
+g.fillOval(10,10,200,100);
+g.drawLine (10,10,500,100); // домашнее задание 
+}
+
+private static class GameField extends JPanel {
+
+@Override
+protected void paintComponent (Graphics g) {
+super.paintComponent(g);
+onRepaint(g);
+}
+
+}
+}
